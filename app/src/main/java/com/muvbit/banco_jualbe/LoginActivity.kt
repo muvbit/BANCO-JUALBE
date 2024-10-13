@@ -26,15 +26,15 @@ class LoginActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-            // Si la validación es correcta, inicia MainActivity
+            // OJO!! Ací passem el usuari al LoginActivity amb la següent funció:
             val intent = Intent(this, MainActivity::class.java)
             intent.putExtra("usuario", usuario)
             startActivity(intent)
-            finish() // Finaliza LoginActivity para que no pueda volver a ella
+            finish()
         }
 
         binding.salir.setOnClickListener {
-            finish() // Finaliza LoginActivity
+            finish()
         }
     }
 
