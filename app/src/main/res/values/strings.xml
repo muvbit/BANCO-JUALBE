@@ -1,4 +1,18 @@
 <resources>
     <string name="app_name">BANCO-JUALBE</string>
     <string name="bienvenida">Bienvenido/a</string>
+    <string name="saldoActualBienvenida">"Tu saldo actual es de "</string>
+    <string name="deseasHacer">¿Qué deseas hacer?</string>
+    <string name="misCuentas">Mis cuentas</string>
+    <string name="configuracion">Configuración</string>
+    <string name="operaciones">Operaciones</string>
+    <string name="misTarjetas">Mis tarjetas</string>
+    <string name="transferencias">Transferencias</string>
+    <string name="introduceUsuario">Introduce el nombre de usuario</string>
+    <string name="introduceContrasenya">Introduce la contraseña</string>
+    <string name="introduceContraseñaActual">Introduce tu contraseña actual</string>
+    <string name="introduceContraseñaNueva">Introduce tu nueva contraseña</string>
+    <string name="Confirmar">Confirmar</string>
+    <string name="Salir">Volver</string>
+    <string name="Volver">Volver</string>
 </resources>

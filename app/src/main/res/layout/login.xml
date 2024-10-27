@@ -3,7 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/background_dark"
+    >
 
     <TextView
         android:id="@+id/titulo"
@@ -14,7 +16,9 @@
         android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
         app:layout_constraintEnd_toEndOf="@id/centroVertical"
         app:layout_constraintStart_toStartOf="@id/centroVertical"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="@color/white"
+        />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/centroVertical"
@@ -38,7 +42,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="60dp"
-            android:hint="Introduce el usuario"
+            android:hint="@string/introduceUsuario"
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"
 
             />
     </com.google.android.material.textfield.TextInputLayout>
@@ -58,7 +64,9 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Introduce la contraseña"
+            android:hint="@string/introduceContrasenya"
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"
             android:inputType="textPassword"
             />
     </com.google.android.material.textfield.TextInputLayout>

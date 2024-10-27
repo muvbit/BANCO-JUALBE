@@ -29,6 +29,7 @@ class LoginActivity : AppCompatActivity() {
             // OJO!! Ací passem el usuari al LoginActivity amb la següent funció:
             val intent = Intent(this, MainActivity::class.java)
             intent.putExtra("usuario", usuario)
+            intent.putExtra("contraseña", contraseña)
             startActivity(intent)
             finish()
         }

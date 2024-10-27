@@ -1,5 +1,6 @@
 package com.muvbit.banco_jualbe
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.muvbit.banco_jualbe.databinding.MainBinding
@@ -16,6 +17,14 @@ class MainActivity : AppCompatActivity() {
         val usuario = intent.getStringExtra("usuario")
         if (usuario != null) {
             binding.bienvenida.text = "Bienvenido/a $usuario"
+        }
+        val contraseña = intent.getStringExtra("contraseña")
+        val botonConfiguracion = binding.cardViewConfiguracion
+
+        botonConfiguracion.setOnClickListener {
+            val intent = Intent(this, ConfigurationActivity::class.java)
+            intent.putExtra("contraseña", contraseña)
+            startActivity(intent)
         }
     }
 }
