@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
         // Ací agafem el usuari que anteriorment havem passat des de LoginActivity
         val usuario = intent.getStringExtra("usuario")
         if (usuario != null) {
-            binding.bienvenida.text = "Bienvenido/a $usuario"
+            binding.bienvenida.text = getString(R.string.bienvenida)+" "+usuario
         }
         val contraseña = intent.getStringExtra("contraseña")
         val botonConfiguracion = binding.cardViewConfiguracion

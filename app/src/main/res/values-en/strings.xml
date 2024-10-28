@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">BANCO-JUALBE</string>
+    <string name="bienvenida">Welcome</string>
+    <string name="saldoActualBienvenida">Your current balance is</string>
+    <string name="deseasHacer">What do you need?</string>
+    <string name="misCuentas">My accounts</string>
+    <string name="configuracion">Settings</string>
+    <string name="operaciones">Operations</string>
+    <string name="misTarjetas">My Cards</string>
+    <string name="transferencias">Transfers</string>
+    <string name="introduceUsuario">Enter here your user name</string>
+    <string name="introduceContrasenya">Enter here your password</string>
+    <string name="introduceContraseñaActual">Enter here your current password</string>
+    <string name="introduceContraseñaNueva">Enter here your new password</string>
+    <string name="confirmar">Confirm</string>
+    <string name="iniciarSesion">Log In</string>
+    <string name="entrar">Login</string>
+    <string name="salir">Exit</string>
+    <string name="volver">Back</string>
+    <string name="currentPassword_mismatch">Current password doesn\'t mismatch</string>
+    <string name="newPasswords_mismatch">New passwords don\'t mismatch</string>
+    <string name="newPassword_changed">PASSWORD CHANGED</string>
+</resources>

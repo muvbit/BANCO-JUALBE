@@ -12,7 +12,12 @@
     <string name="introduceContrasenya">Introduce la contraseña</string>
     <string name="introduceContraseñaActual">Introduce tu contraseña actual</string>
     <string name="introduceContraseñaNueva">Introduce tu nueva contraseña</string>
-    <string name="Confirmar">Confirmar</string>
-    <string name="Salir">Volver</string>
-    <string name="Volver">Volver</string>
+    <string name="confirmar">Confirmar</string>
+    <string name="salir">Salir</string>
+    <string name="volver">Volver</string>
+    <string name="currentPassword_mismatch">La contraseña actual no coincide con la contraseña introducida.</string>
+    <string name="newPasswords_mismatch">Las nuevas contraseñas introducidas no coinciden.</string>
+    <string name="newPassword_changed">CONTRASEÑA CAMBIADA CON ÉXITO.</string>
+    <string name="iniciarSesion">Iniciar sesión</string>
+    <string name="entrar">Entrar</string>
 </resources>
