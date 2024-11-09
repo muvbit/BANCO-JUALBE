@@ -2,6 +2,7 @@ package com.muvbit.banco_jualbe
 
 import android.content.Intent
 import android.os.Bundle
+import android.text.Spannable
 import android.text.SpannableString
 import android.text.style.ClickableSpan
 import android.view.View
@@ -47,14 +48,10 @@ class LoginActivity : AppCompatActivity() {
             }
         }
 
-        val texto=R.string.nuevoCliente.toString()
-        var textoSpannable=SpannableString(texto)
 
-        val clickableSpan= object:ClickableSpan(){
-            override fun onClick(p0: View) {
-                val intent=Intent(this@LoginActivity,NuevoCliente::class.java)
-                startActivity(intent)
-            }
+        binding.tvNuevoCliente.setOnClickListener{
+            val intent = Intent(this,NuevoClienteActivity::class.java)
+            startActivity(intent)
         }
 
 

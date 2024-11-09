@@ -8,7 +8,7 @@
     <string name="operaciones">Operaciones</string>
     <string name="misTarjetas">Mis tarjetas</string>
     <string name="transferencias">Transferencias</string>
-    <string name="introduceUsuario">Introduce el nombre de usuario</string>
+    <string name="introduceUsuario">Introduce tu NIF</string>
     <string name="introduceContrasenya">Introduce la contraseña</string>
     <string name="introduceContraseñaActual">Introduce tu contraseña actual</string>
     <string name="introduceContraseñaNueva">Introduce tu nueva contraseña</string>
@@ -28,7 +28,7 @@
     <string name="enviar">Enviar</string>
     <string name="cancelar">Cancelar</string>
     <string name="escribeCuenta">Escribe el núm. de cuenta ajena</string>
-    <string name="nuevoCliente">¿Es usted un nuevo cliente?\nPuede crear una nueva cuenta pulsando aquí</string>
+    <string name="nuevoCliente">¿Es usted un nuevo cliente?\nPuede crear una nueva cuenta pulsando <b>aquí</b></string>
     <string name="titleNuevoCliente">Nuevo cliente</string>
     <string name="introduceContrasenya2">Introduce de nuevo la contraseña</string>
     <string name="introduceTuNombre">Introduce tu nombre</string>

@@ -9,7 +9,7 @@
     <string name="operaciones">Operations</string>
     <string name="misTarjetas">My Cards</string>
     <string name="transferencias">Transfers</string>
-    <string name="introduceUsuario">Enter here your user name</string>
+    <string name="introduceUsuario">Enter here your NIF</string>
     <string name="introduceContrasenya">Enter here your password</string>
     <string name="introduceContraseñaActual">Enter here your current password</string>
     <string name="introduceContraseñaNueva">Enter here your new password</string>
