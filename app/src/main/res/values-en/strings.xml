@@ -21,4 +21,8 @@
     <string name="currentPassword_mismatch">Current password doesn\'t mismatch</string>
     <string name="newPasswords_mismatch">New passwords don\'t mismatch</string>
     <string name="newPassword_changed">PASSWORD CHANGED</string>
+    <string name="enviarJustificante">Enviar justificante</string>
+    <string name="enviar">Enviar</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="escribeCuenta">Escribe el núm. de cuenta ajena</string>
 </resources>

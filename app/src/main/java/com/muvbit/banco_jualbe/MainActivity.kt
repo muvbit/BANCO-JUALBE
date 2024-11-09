@@ -16,10 +16,16 @@ class MainActivity : AppCompatActivity() {
         // Ací agafem el usuari que anteriorment havem passat des de LoginActivity
         val usuario = intent.getStringExtra("usuario")
         if (usuario != null) {
-            binding.bienvenida.text = getString(R.string.bienvenida)+" "+usuario
+            binding.bienvenida.text = getString(R.string.bienvenida) + " " + usuario
         }
         val contraseña = intent.getStringExtra("contraseña")
         val botonConfiguracion = binding.cardViewConfiguracion
+        val btnTransferencias = binding.cardViewTransferencias
+
+        btnTransferencias.setOnClickListener {
+            val intent = Intent(this, TransferActivity::class.java)
+            startActivity(intent)
+        }
 
         botonConfiguracion.setOnClickListener {
             val intent = Intent(this, ConfigurationActivity::class.java)

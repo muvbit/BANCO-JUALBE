@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background_dark"
+    android:theme="@style/Theme.BANCOJUALBE"
     >
 
     <TextView
@@ -37,14 +38,15 @@
         android:layout_marginRight="30dp"
         android:layout_marginLeft="30dp"
         android:layout_marginTop="60dp"
+        android:textColorHint="@color/white"
+
         >
-        <com.google.android.material.textfield.TextInputEditText
+        <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="60dp"
             android:hint="@string/introduceUsuario"
             android:textColorHint="@color/white"
-            android:textColor="@color/white"
 
             />
     </com.google.android.material.textfield.TextInputLayout>
@@ -58,6 +60,8 @@
         app:layout_constraintTop_toBottomOf="@id/user"
         android:layout_marginTop="60dp"
         app:endIconMode="password_toggle"
+        android:textColorHint="@color/white"
+        app:endIconTint="@color/white"
         >
 
 

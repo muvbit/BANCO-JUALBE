@@ -20,4 +20,12 @@
     <string name="newPassword_changed">CONTRASEÑA CAMBIADA CON ÉXITO.</string>
     <string name="iniciarSesion">Iniciar sesión</string>
     <string name="entrar">Entrar</string>
+    <string name="eligeCuenta">Elige cuenta</string>
+    <string name="cuentaPropia">Cuenta propia</string>
+    <string name="cuentaAjena">Cuenta ajena</string>
+    <string name="cantidad">Cantidad:</string>
+    <string name="enviarJustificante">Enviar justificante</string>
+    <string name="enviar">Enviar</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="escribeCuenta">Escribe el núm. de cuenta ajena</string>
 </resources>
