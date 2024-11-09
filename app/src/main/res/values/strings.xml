@@ -28,4 +28,10 @@
     <string name="enviar">Enviar</string>
     <string name="cancelar">Cancelar</string>
     <string name="escribeCuenta">Escribe el núm. de cuenta ajena</string>
+    <string name="nuevoCliente">¿Es usted un nuevo cliente?\nPuede crear una nueva cuenta pulsando aquí</string>
+    <string name="titleNuevoCliente">Nuevo cliente</string>
+    <string name="introduceContrasenya2">Introduce de nuevo la contraseña</string>
+    <string name="introduceTuNombre">Introduce tu nombre</string>
+    <string name="introduceApellidos">Introduce tus apellidos</string>
+    <string name="introduceEmail">Introduce tu correo electrónico</string>
 </resources>

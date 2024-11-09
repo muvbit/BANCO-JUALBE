@@ -4,6 +4,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.snackbar.Snackbar
 import com.muvbit.banco_jualbe.databinding.ConfigurationBinding
+import com.muvbit.banco_jualbe.pojo.Cliente
 
 class ConfigurationActivity : AppCompatActivity() {
     lateinit var binding: ConfigurationBinding
@@ -16,7 +17,7 @@ class ConfigurationActivity : AppCompatActivity() {
         binding = ConfigurationBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        var contraseñaActual=intent.getStringExtra("contraseña")
+        val cliente=intent.getSerializableExtra("cliente") as Cliente
         var contraseñaActualCoincide=false
         var contraseñasNuevasCoinciden=false
         var contraseñaNueva=""
@@ -24,7 +25,7 @@ class ConfigurationActivity : AppCompatActivity() {
         binding.currentPassword.editText?.setOnFocusChangeListener{_, hasFocus->
             if(!hasFocus){
                 val contraseñaActualIntroducida= binding.currentPassword.editText?.text.toString()
-                if(contraseñaActualIntroducida!=contraseñaActual){
+                if(cliente.getClaveSeguridad().toString()!=contraseñaActualIntroducida){
                     showSnackbar(getString(R.string.currentPassword_mismatch))
                     contraseñaActualCoincide=false
                 }else contraseñaActualCoincide = true
@@ -42,7 +43,7 @@ class ConfigurationActivity : AppCompatActivity() {
         }
         binding.btnConfirmar.setOnClickListener {
             if(contraseñaActualCoincide && contraseñasNuevasCoinciden){
-                contraseñaActual=contraseñaNueva
+                cliente.setClaveSeguridad(contraseñaNueva)
                 showSnackbar(getString(R.string.newPassword_changed))
                 finish()
             }else{

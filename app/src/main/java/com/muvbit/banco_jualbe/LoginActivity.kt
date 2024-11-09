@@ -2,9 +2,15 @@ package com.muvbit.banco_jualbe
 
 import android.content.Intent
 import android.os.Bundle
+import android.text.SpannableString
+import android.text.style.ClickableSpan
+import android.view.View
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.snackbar.Snackbar
+import com.muvbit.banco_jualbe.bd.MiBancoOperacional
 import com.muvbit.banco_jualbe.databinding.LoginBinding
+import com.muvbit.banco_jualbe.pojo.Cliente
 
 class LoginActivity : AppCompatActivity() {
     lateinit var binding: LoginBinding
@@ -13,6 +19,9 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = LoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        val banco=MiBancoOperacional.getInstance(this)
+        var clientePrueba:Cliente
 
         binding.entrar.setOnClickListener {
             val usuario = binding.user.editText?.text.toString()
@@ -25,14 +34,30 @@ class LoginActivity : AppCompatActivity() {
                 showSnackbar("La contraseña no puede estar vacía.")
                 return@setOnClickListener
             }
-
-            // OJO!! Ací passem el usuari al LoginActivity amb la següent funció:
-            val intent = Intent(this, MainActivity::class.java)
-            intent.putExtra("usuario", usuario)
-            intent.putExtra("contraseña", contraseña)
-            startActivity(intent)
-            finish()
+            clientePrueba=Cliente(0,usuario,"","",contraseña,"")
+            var cliente=banco?.login(clientePrueba)
+            if(cliente!=null){
+                val intent = Intent(this, MainActivity::class.java)
+                intent.putExtra("cliente" , cliente)
+                startActivity(intent)
+                finish()
+            }else{
+                AlertDialog.Builder(this).setMessage("El nombre de usuario y/o contraseña no coinciden.").setPositiveButton("Aceptar"){dialog,_->dialog.dismiss()}.show()
+                return@setOnClickListener
+            }
         }
+
+        val texto=R.string.nuevoCliente.toString()
+        var textoSpannable=SpannableString(texto)
+
+        val clickableSpan= object:ClickableSpan(){
+            override fun onClick(p0: View) {
+                val intent=Intent(this@LoginActivity,NuevoCliente::class.java)
+                startActivity(intent)
+            }
+        }
+
+
 
         binding.salir.setOnClickListener {
             finish()
