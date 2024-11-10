@@ -13,7 +13,7 @@
         android:theme="@style/Theme.BANCOJUALBE"
         tools:targetApi="31">
         <activity
-            android:name=".ListaMovimientos"
+            android:name=".ListaMovimientosActivity"
             android:exported="false" />
         <activity
             android:name=".OperacionesActivity"

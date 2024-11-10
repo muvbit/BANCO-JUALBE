@@ -1,23 +1,25 @@
 package com.muvbit.banco_jualbe
 
+import android.content.Intent
 import android.os.Bundle
-import android.view.LayoutInflater
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.muvbit.banco_jualbe.databinding.OperacionesBinding
+import com.muvbit.banco_jualbe.pojo.Cliente
 
 class OperacionesActivity : AppCompatActivity() {
-    lateinit var binding:OperacionesBinding
+    lateinit var binding: OperacionesBinding
+    lateinit var cliente: Cliente
     override fun onCreate(savedInstanceState: Bundle?) {
-        binding=OperacionesBinding.inflate(layoutInflater)
+        cliente = intent.getSerializableExtra("cliente") as Cliente
+        binding = OperacionesBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
-        binding.run{
-            cvMovimientos.setOnClickListener{
-
+        binding.run {
+            cvMovimientos.setOnClickListener {
+                val intent = Intent(this@OperacionesActivity, ListaMovimientosActivity::class.java)
+                intent.putExtra("cliente", cliente)
+                startActivity(intent)
             }
         }
-        }
     }
+}
