@@ -47,6 +47,7 @@
             android:layout_marginTop="60dp"
             android:hint="@string/introduceUsuario"
             android:textColorHint="@color/white"
+            android:textColor="@color/white"
 
             />
     </com.google.android.material.textfield.TextInputLayout>

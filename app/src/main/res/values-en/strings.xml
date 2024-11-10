@@ -31,4 +31,11 @@
     <string name="introduceTuNombre">Introduce tu nombre</string>
     <string name="introduceApellidos">Introduce tus apellidos</string>
     <string name="introduceEmail">Introduce tu correo electrónico</string>
+    <string name="movimientos">Movimientos</string>
+    <string name="movimientosCuenta">Movimientos de su cuenta</string>
+    <string name="importe">"Importe: "</string>
+    <string name="cuentas">Cuentas</string>
+    <string name="ultimosMovimientosCuenta">Últimos movimientos de su cuenta</string>
+    <string name="ocultarSaldo">Ocultar saldo</string>
+    <string name="verTodosMovimientos">Ver movimientos</string>
 </resources>

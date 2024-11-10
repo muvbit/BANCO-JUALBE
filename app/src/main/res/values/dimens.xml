@@ -4,4 +4,5 @@
     <dimen name="default_margin_H">16dp</dimen>
     <dimen name="default_margin">20dp</dimen>
     <dimen name="default_margin_titles">50dp</dimen>
+    <dimen name="default_margin_items">8dp</dimen>
 </resources>

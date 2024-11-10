@@ -48,6 +48,15 @@
                 app:layout_constraintStart_toEndOf="@id/avatar"
                 app:layout_constraintTop_toTopOf="parent"
                 android:textColor="@color/white"/>
+            <ImageView
+                android:id="@+id/imgLogout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/logout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_margin="@dimen/default_margin_V"/>
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.cardview.widget.CardView>
@@ -91,7 +100,27 @@
                 android:text="@string/saldoActualBienvenida"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                android:textColor="@color/white"/>
+                android:textColor="@color/white"
+                />
+            <TextView
+                android:id="@+id/saldoActual"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@+id/saldoBienvenida"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="XXXXXX €"
+                />
+            <Switch
+                android:id="@+id/swSaldo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+
+                app:layout_constraintTop_toTopOf="parent"
+                android:text="@string/ocultarSaldo"
+                android:checked="true"
+                 />
 
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/tituloDeseasHacer"
@@ -308,6 +337,8 @@
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
             </androidx.cardview.widget.CardView>
+
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

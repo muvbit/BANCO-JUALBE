@@ -3,7 +3,7 @@ package com.muvbit.banco_jualbe
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.muvbit.banco_jualbe.bd.MiBancoOperacional
+import com.muvbit.banco_jualbe.dao.CuentaDAO
 import com.muvbit.banco_jualbe.databinding.MainBinding
 import com.muvbit.banco_jualbe.pojo.Cliente
 
@@ -20,19 +20,45 @@ class MainActivity : AppCompatActivity() {
         if (cliente != null) {
             binding.bienvenida.text = getString(R.string.bienvenida) + " " + cliente.getNombre()
         }
+        binding.run {
 
-        val botonConfiguracion = binding.cardViewConfiguracion
-        val btnTransferencias = binding.cardViewTransferencias
+            cardViewTransferencias.setOnClickListener {
+                val intent = Intent(this@MainActivity, TransferActivity::class.java)
+                startActivity(intent)
+            }
 
-        btnTransferencias.setOnClickListener {
-            val intent = Intent(this, TransferActivity::class.java)
-            startActivity(intent)
+            cardViewConfiguracion.setOnClickListener {
+                val intent = Intent(this@MainActivity, ConfigurationActivity::class.java)
+                intent.putExtra("cliente", cliente)
+                startActivity(intent)
+            }
+
+            cardViewCuentas.setOnClickListener {
+                val intent = Intent(this@MainActivity, CuentasActivity::class.java)
+                intent.putExtra("cliente", cliente)
+                startActivity(intent)
+            }
+            cardViewOperaciones.setOnClickListener {
+                val intent=Intent(this@MainActivity,OperacionesActivity::class.java)
+                intent.putExtra("cliente",cliente)
+                startActivity(intent)
+            }
+            saldoActual.text = "********* €"
+
+            swSaldo.setOnCheckedChangeListener { _, isChecked ->
+                if (isChecked) {
+                    saldoActual.text = "********* €"
+                } else saldoActual.text =
+                    CuentaDAO().getSaldoCuentasCliente(cliente).toString() + " €"
+            }
+            imgLogout.setOnClickListener {
+                val intent=Intent(this@MainActivity,LoginActivity::class.java)
+                startActivity(intent)
+                finish()
+            }
         }
 
-        botonConfiguracion.setOnClickListener {
-            val intent = Intent(this, ConfigurationActivity::class.java)
-            intent.putExtra("cliente",cliente)
-            startActivity(intent)
-        }
+
     }
 }
+

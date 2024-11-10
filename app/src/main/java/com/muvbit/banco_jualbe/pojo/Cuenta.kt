@@ -76,7 +76,9 @@ class Cuenta : Serializable {
     fun getSaldoActual(): Float? {
         return saldoActual
     }
-
+    fun getCuentaCompleta(): String?{
+        return banco + " " +sucursal+" "+dc+" "+numeroCuenta
+    }
     fun setBanco(banco: String?) {
         this.banco = banco
     }

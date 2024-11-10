@@ -116,7 +116,7 @@ class CuentaDAO : PojoDAO {
     }
 
     fun getCuentas(cliente: Cliente?): ArrayList<*> {
-        val listaCuentas: ArrayList<Cuenta> = ArrayList<Cuenta>()
+        val listaCuentas: ArrayList<Cuenta> = ArrayList()
         val condicion = "idcliente=" + String.valueOf(cliente!!.getId())
         val columnas = arrayOf(
             "id", "banco", "sucursal", "dc", "numerocuenta", "saldoactual", "idcliente"
@@ -141,5 +141,14 @@ class CuentaDAO : PojoDAO {
             } while (cursor.moveToNext())
         }
         return listaCuentas
+    }
+    fun getSaldoCuentasCliente(cliente: Cliente?): Float?{
+        val cuentas = getCuentas(cliente) as ArrayList<Cuenta>
+        val it=cuentas.iterator()
+        var saldoTotal=0f
+        while(it.hasNext()){
+            saldoTotal += it.next().getSaldoActual() as Float
+        }
+        return saldoTotal
     }
 }

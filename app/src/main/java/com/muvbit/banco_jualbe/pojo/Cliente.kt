@@ -62,7 +62,9 @@ class Cliente : Serializable {
     fun getEmail(): String? {
         return email
     }
-
+    fun getListaCuentas(): ArrayList<Cuenta>? {
+        return listaCuentas
+    }
     fun setId(id: Int) {
         this.id = id
     }
