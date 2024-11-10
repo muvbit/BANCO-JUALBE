@@ -24,6 +24,7 @@ class MainActivity : AppCompatActivity() {
 
             cardViewTransferencias.setOnClickListener {
                 val intent = Intent(this@MainActivity, TransferActivity::class.java)
+                intent.putExtra("cliente",cliente)
                 startActivity(intent)
             }
 

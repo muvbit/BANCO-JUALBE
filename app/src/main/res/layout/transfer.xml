@@ -38,6 +38,7 @@
         android:layout_marginVertical="@dimen/default_margin"
         android:layout_marginHorizontal="@dimen/default_margin_H"
         app:layout_constraintTop_toBottomOf="@id/subtitulo"
+        android:popupBackground="@color/black"
         />
     <RadioGroup
         android:layout_margin="@dimen/default_margin"
@@ -86,6 +87,7 @@
         android:layout_marginHorizontal="@dimen/default_margin_H"
         android:hint="@string/escribeCuenta"
         android:visibility="invisible"
+        android:textColor="@color/white"
         />
     <Spinner
         android:id="@+id/spnCuenta2"
@@ -94,8 +96,10 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginVertical="@dimen/default_margin"
+        android:paddingVertical="@dimen/default_margin_V"
         android:layout_marginHorizontal="@dimen/default_margin_H"
         app:layout_constraintTop_toBottomOf="@id/rdCuentas"
+        android:popupBackground="@color/black"
         />
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/tvCantidad"
@@ -115,9 +119,11 @@
         app:layout_constraintTop_toBottomOf="@id/spnCuenta2"
         app:layout_constraintStart_toEndOf="@id/tvCantidad"
         android:layout_marginHorizontal="@dimen/default_margin_H"
+        android:textColor="@color/white"
+        android:hint="@string/introduceCantidad"
         />
     <Spinner
-        android:id="@+id/divisa"
+        android:id="@+id/spnDivisa"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toEndOf="@id/txCantidad"
@@ -136,7 +142,7 @@
         android:textColor="@color/white"
         android:text="@string/enviarJustificante"/>
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/enviar"
+        android:id="@+id/btnEnviar"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:text="@string/enviar"
@@ -146,10 +152,10 @@
         android:layout_marginVertical="@dimen/default_margin"
         />
     <Button
-        android:id="@+id/cancelar"
+        android:id="@+id/btnBorrar"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:text="@string/cancelar"
+        android:text="@string/borrar"
         android:layout_marginHorizontal="@dimen/default_margin_H"
         android:layout_marginVertical="@dimen/default_margin"
         app:layout_constraintTop_toBottomOf="@id/cbJustificante"

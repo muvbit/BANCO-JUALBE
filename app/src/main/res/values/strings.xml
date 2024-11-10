@@ -41,4 +41,6 @@
     <string name="ultimosMovimientosCuenta">Últimos movimientos de su cuenta</string>
     <string name="ocultarSaldo">Ocultar saldo</string>
     <string name="verTodosMovimientos">Ver movimientos</string>
+    <string name="borrar">Borrar</string>
+    <string name="introduceCantidad">Introduce la cantidad</string>
 </resources>
