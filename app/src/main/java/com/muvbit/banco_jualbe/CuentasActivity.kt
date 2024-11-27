@@ -20,8 +20,6 @@ class CuentasActivity : AppCompatActivity() {
         setContentView(binding.root)
         cliente = intent.getSerializableExtra("cliente") as Cliente
         initRecyclerView()
-
-
     }
 
     fun initRecyclerView() {

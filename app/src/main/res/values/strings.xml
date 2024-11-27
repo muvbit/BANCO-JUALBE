@@ -43,4 +43,8 @@
     <string name="verTodosMovimientos">Ver movimientos</string>
     <string name="borrar">Borrar</string>
     <string name="introduceCantidad">Introduce la cantidad</string>
+    <string name="posicionGlobal">Posición Global</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="pulseCuenta">Pulse en una de sus cuentas\npara ver sus movimientos.</string>
 </resources>

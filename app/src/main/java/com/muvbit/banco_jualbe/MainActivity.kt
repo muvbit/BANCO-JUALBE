@@ -35,7 +35,7 @@ class MainActivity : AppCompatActivity() {
             }
 
             cardViewCuentas.setOnClickListener {
-                val intent = Intent(this@MainActivity, CuentasActivity::class.java)
+                val intent = Intent(this@MainActivity, GlobalPositionActivity::class.java)
                 intent.putExtra("cliente", cliente)
                 startActivity(intent)
             }

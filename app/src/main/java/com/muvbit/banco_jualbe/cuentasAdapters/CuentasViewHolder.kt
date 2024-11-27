@@ -27,8 +27,6 @@ class CuentasViewHolder(view: View) : RecyclerView.ViewHolder(view) {
                 intent.putExtra("cuenta", cuenta)
                 ContextCompat.startActivity(cvMain.context,intent,null)
             }
-
-
         }
     }
 }

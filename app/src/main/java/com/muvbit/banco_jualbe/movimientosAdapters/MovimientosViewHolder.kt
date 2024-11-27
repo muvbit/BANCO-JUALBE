@@ -15,7 +15,7 @@ class MovimientosViewHolder(view: View) : RecyclerView.ViewHolder(view) {
             tvDescripcion.text = movimiento.getDescripcion()
             tvImporte.text = movimiento.getImporte().toString()
             fecha.text = movimiento.getFechaOperacion().toString()
-            if (movimiento.getImporte()!! < 0) {
+            if (movimiento.getImporte() < 0) {
                 tvImporte.setTextColor(
                     ContextCompat.getColor(
                         binding.root.context,

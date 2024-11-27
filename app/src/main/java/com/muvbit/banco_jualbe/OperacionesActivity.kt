@@ -20,6 +20,11 @@ class OperacionesActivity : AppCompatActivity() {
                 intent.putExtra("cliente", cliente)
                 startActivity(intent)
             }
+            cvGlobalPosition.setOnClickListener {
+                val intent = Intent(this@OperacionesActivity, GlobalPositionActivity::class.java)
+                intent.putExtra("cliente", cliente)
+                startActivity(intent)
+            }
         }
     }
 }
