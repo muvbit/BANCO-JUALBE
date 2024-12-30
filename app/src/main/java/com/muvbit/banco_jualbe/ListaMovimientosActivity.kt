@@ -25,9 +25,9 @@ class ListaMovimientosActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
         cliente = intent.getSerializableExtra("cliente") as Cliente
-        val cuentas = CuentaDAO().getCuentas(cliente) as ArrayList<Cuenta>
-        val numerosCuenta = cuentas.map { it.getCuentaCompleta()?:"No existen cuentas" }
-        val adapterCuentas = ArrayAdapter(this, android.R.layout.simple_spinner_item, numerosCuenta)
+        val cuentas = CuentaDAO().getCuentas(cliente) as ArrayList<Cuenta> //RECOGEMOS LA LISTA DE CUENTAS DEL CLIENTE
+        val numerosCuenta = cuentas.map { it.getCuentaCompleta()?:"No existen cuentas" } //HACEMOS UN MAPEO PARA RECOGER LOS NUMEROS DE LAS CUENTAS
+        val adapterCuentas = ArrayAdapter(this, android.R.layout.simple_spinner_item, numerosCuenta) // CREAMOS EL ADAPTADOR PARA PASAR EL ARRAY AL SPINNER
         binding.run {
             adapterCuentas.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
             spnCuenta.adapter = adapterCuentas

@@ -11,7 +11,7 @@
         <item name="colorPrimary">@color/material_dynamic_neutral_variant50</item>
         <item name="android:windowBackground">@drawable/background_dark</item>
         <item name="android:textColor">@color/white</item>
-    </style>-->
+    </style>
     <style name="CustomSpinnerStyle" parent="Widget.AppCompat.Spinner">
         <item name="android:popupBackground">#000000</item>
         <item name="android:textColor">#FFFFFF</item>
